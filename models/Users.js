@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { stringify } from 'querystring';
 
 const UserSchema = new mongoose.Schema({
     name: {
@@ -8,12 +7,12 @@ const UserSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required = true,
-        unique = true
+        required: true,
+        unique: true
     },
     password: {
         type: String,
-        required = true
+        required: true
     }
 });
 
