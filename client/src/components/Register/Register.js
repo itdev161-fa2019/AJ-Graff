@@ -47,6 +47,7 @@ const Register = ({ authenticateUser }) => {
                 // Store user data and redirect
                 localStorage.setItem('token', res.data.token);
                 history.push('/');
+                
             } catch (error) {
                 // Clear user data and set errors
                 localStorage.removeItem('token');
