@@ -32,7 +32,7 @@ const EditPost = ({ token, post, onPostUpdated }) => {
             try {
                 const config = {
                     headers: {
-                        'Content-type': 'application/json',
+                        'Content-Type': 'application/json',
                         'x-auth-token': token
                     }
                 };
@@ -49,7 +49,7 @@ const EditPost = ({ token, post, onPostUpdated }) => {
                 onPostUpdated(res.data);
                 history.push('/');
             } catch (error) {
-                console.error(`Error creating post: ${error}`);
+                console.error(`Error creating post: ${error.response.data}`);
             }
         }
     };
